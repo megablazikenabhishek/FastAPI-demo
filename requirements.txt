@@ -1,0 +1,4 @@
+fastapi
+uvicron
+sqlalchemy
+mysqlclient
