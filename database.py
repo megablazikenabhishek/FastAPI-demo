@@ -7,7 +7,7 @@ SQL_ALCHEMY_DATABASE_URL = MYSQL_URI
 
 engine = create_engine(SQL_ALCHEMY_DATABASE_URL)
 
-sessionLocal = sessionmaker(autocommit=True, bind=engine, autoflush=False)
+sessionLocal = sessionmaker(autocommit=False, bind=engine, autoflush=False)
 
 base = declarative_base()
 
