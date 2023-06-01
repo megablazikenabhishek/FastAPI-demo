@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from . import UserSchema
 
 
 class Blog(BaseModel):
@@ -9,6 +10,8 @@ class Blog(BaseModel):
 class showBlog(BaseModel):
     title: str
     body: str
+    print(UserSchema.showUser)
+    creator: UserSchema.showUser
 
     class Config:
         orm_mode = True
