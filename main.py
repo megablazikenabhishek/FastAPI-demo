@@ -2,12 +2,12 @@ from fastapi import FastAPI, Depends, status, Response, HTTPException
 from typing import Optional, List, Dict
 from schemas import BlogSchema, UserSchema
 from models import Blog, User
-from database import engine, get_db
+from database import engine, get_db, base
 from sqlalchemy.orm import Session
 from passlib.context import CryptContext
 from fastapi.responses import HTMLResponse
 
-Blog.base.metadata.create_all(bind=engine)
+base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
